@@ -1,0 +1,159 @@
+/*Colors*/
+$white: #ffffff;
+$brown: #c7b299;
+
+
+/*Basic*/
+a:hover,
+a:visited,
+a:focus,
+a:active {
+	text-decoration: none;
+}
+button:focus {
+	outline: none;
+}
+*{
+	transition: all 0.3s;
+}
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.header-slider {
+	padding-top: 40px;
+	li {
+		display: inline-block;
+		a {
+			display: inline-block;
+			color: $white;
+			padding-right: 24px;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 300;
+			font-size: 14px;
+			position: relative;
+			line-height: 4;
+			&:hover {
+				color: $brown;
+			}
+			.hover-bag {
+				position: absolute;
+				top: 0%;
+				opacity: 0;
+				&:hover {
+					opacity: 1;
+				}
+			}
+			.hover-search {
+				position: absolute;
+				top: 0%;
+				opacity: 0;
+				&:hover {
+					opacity: 1;
+				}
+			}
+		}
+		#bag {
+			margin-left: 15px;
+			padding-right: 0;
+			vertical-align: middle;
+		}
+		#search {
+			margin-left: 15px;
+			padding-right: 0;
+			vertical-align: middle;
+		}
+	}
+}
+
+
+.slide1 {
+	background: url(../../images/header-bg.jpg) no-repeat center center;
+	background-size: cover;
+	height: 100vh;
+	min-height: 60rem;
+}
+.slide2 {
+	background: url(http://veented.info/waxom/wp-content/uploads/2015/03/mountain3.jpg) no-repeat center center;
+	background-size: cover;
+	height: 100vh;
+	min-height: 60rem;
+}
+.slide3 {
+	background: url(http://veented.info/waxom/wp-content/uploads/2015/03/water.jpg) no-repeat center center;
+	background-size: cover;
+	height: 100vh;
+	min-height: 60rem;
+}
+
+.arrow {
+	border: 0;
+	position: absolute;
+	top: 300px
+}
+.arrow-right {
+	right: 20px;
+	background: none;
+}
+.arrow-left {
+	left: 20px;
+	z-index: 5;
+	background: none;
+}
+
+.inner {
+	width: 600px;
+	margin: 0 auto;
+	text-align: center;
+	color: $white;
+	padding-top: 100px;
+	padding-bottom: 300px;
+	h3 {
+		font-family: 'Raleway', sans-serif;
+		font-size: 36px;
+		line-height: 1.2;
+		font-weight: 300;
+	}
+	h2 {
+		font-family: 'Raleway', sans-serif;
+		font-weight: 800;
+		font-size: 52px;
+	}
+	p {
+		width: 570px;
+		margin: 0 auto;
+	}
+	a {
+		padding: 15px 40px;
+		border: 1px solid #998675;
+		border-radius: 5px;
+		color: $white;
+		text-transform: uppercase;
+		font-family: 'Raleway', sans-serif;
+		font-weight: 700;
+		font-size: 14px;
+		margin-top: 50px;
+		display: inline-block;
+		
+		&:hover {
+			background: #998675;
+		}
+	}
+}
