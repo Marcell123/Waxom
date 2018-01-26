@@ -21,15 +21,11 @@ ul {
   margin: 0;
 }
 
-.header-slider {
-  padding-top: 40px;
-}
-
-.header-slider li {
+.main-menu li {
   display: inline-block;
 }
 
-.header-slider li a {
+.main-menu li a {
   display: inline-block;
   color: #ffffff;
   padding-right: 24px;
@@ -40,40 +36,49 @@ ul {
   line-height: 4;
 }
 
-.header-slider li a:hover {
+.main-menu li a:hover {
   color: #c7b299;
 }
 
-.header-slider li a .hover-bag {
+.main-menu li a .hover-bag {
   position: absolute;
-  top: 0%;
+  top: 30%;
   opacity: 0;
 }
 
-.header-slider li a .hover-bag:hover {
+.main-menu li a .hover-bag:hover {
   opacity: 1;
 }
 
-.header-slider li a .hover-search {
+.main-menu li a .hover-search {
   position: absolute;
-  top: 0%;
+  top: 30%;
   opacity: 0;
 }
 
-.header-slider li a .hover-search:hover {
+.main-menu li a .hover-search:hover {
   opacity: 1;
 }
 
-.header-slider li #bag {
+.main-menu li #bag {
   margin-left: 15px;
   padding-right: 0;
   vertical-align: middle;
 }
 
-.header-slider li #search {
+.main-menu li #search {
   margin-left: 15px;
   padding-right: 0;
   vertical-align: middle;
+}
+
+.menu-wrap {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  margin-top: 40px;
+  z-index: 9999;
 }
 
 .slide1 {
@@ -119,7 +124,7 @@ ul {
   margin: 0 auto;
   text-align: center;
   color: #ffffff;
-  padding-top: 100px;
+  padding-top: 20%;
   padding-bottom: 300px;
 }
 
@@ -128,17 +133,20 @@ ul {
   font-size: 36px;
   line-height: 1.2;
   font-weight: 300;
+  animation-delay: 0s;
 }
 
 .inner h2 {
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
   font-size: 52px;
+  animation-delay: .2s;
 }
 
 .inner p {
   width: 570px;
   margin: 0 auto;
+  animation-delay: .4s;
 }
 
 .inner a {
@@ -152,6 +160,7 @@ ul {
   font-size: 14px;
   margin-top: 50px;
   display: inline-block;
+  animation-delay: .6s;
 }
 
 .inner a:hover {

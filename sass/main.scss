@@ -24,21 +24,7 @@ ul {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-.header-slider {
-	padding-top: 40px;
+.main-menu {
 	li {
 		display: inline-block;
 		a {
@@ -55,7 +41,7 @@ ul {
 			}
 			.hover-bag {
 				position: absolute;
-				top: 0%;
+				top: 30%;
 				opacity: 0;
 				&:hover {
 					opacity: 1;
@@ -63,7 +49,7 @@ ul {
 			}
 			.hover-search {
 				position: absolute;
-				top: 0%;
+				top: 30%;
 				opacity: 0;
 				&:hover {
 					opacity: 1;
@@ -83,6 +69,14 @@ ul {
 	}
 }
 
+.menu-wrap {
+	position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  margin-top: 40px;
+  z-index: 9999;
+}
 
 .slide1 {
 	background: url(../../images/header-bg.jpg) no-repeat center center;
@@ -123,22 +117,25 @@ ul {
 	margin: 0 auto;
 	text-align: center;
 	color: $white;
-	padding-top: 100px;
+	padding-top: 20%;
 	padding-bottom: 300px;
 	h3 {
 		font-family: 'Raleway', sans-serif;
 		font-size: 36px;
 		line-height: 1.2;
 		font-weight: 300;
+		animation-delay: 0s;
 	}
 	h2 {
 		font-family: 'Raleway', sans-serif;
 		font-weight: 800;
 		font-size: 52px;
+		animation-delay: .2s;
 	}
 	p {
 		width: 570px;
 		margin: 0 auto;
+		animation-delay: .4s;
 	}
 	a {
 		padding: 15px 40px;
@@ -151,9 +148,12 @@ ul {
 		font-size: 14px;
 		margin-top: 50px;
 		display: inline-block;
+		animation-delay: .6s;
 		
 		&:hover {
 			background: #998675;
 		}
 	}
 }
+
+
