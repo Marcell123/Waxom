@@ -9,13 +9,12 @@ a:visited,
 a:focus,
 a:active {
 	text-decoration: none;
+	transition: all 0.3s;
 }
 button:focus {
 	outline: none;
 }
-*{
-	transition: all 0.3s;
-}
+
 ul {
 	list-style: none;
 	padding: 0;
@@ -23,7 +22,7 @@ ul {
 }
 
 
-
+/*Header*/
 .main-menu {
 	li {
 		display: inline-block;
@@ -108,8 +107,8 @@ ul {
 }
 .arrow-left {
 	left: 20px;
-	z-index: 5;
 	background: none;
+	z-index: 5;
 }
 
 .inner {
@@ -117,25 +116,25 @@ ul {
 	margin: 0 auto;
 	text-align: center;
 	color: $white;
-	padding-top: 20%;
+	padding-top: 17%;
 	padding-bottom: 300px;
 	h3 {
 		font-family: 'Raleway', sans-serif;
 		font-size: 36px;
 		line-height: 1.2;
 		font-weight: 300;
-		animation-delay: 0s;
+		animation-delay: .2s;
 	}
 	h2 {
 		font-family: 'Raleway', sans-serif;
 		font-weight: 800;
 		font-size: 52px;
-		animation-delay: .2s;
+		animation-delay: .4s;
 	}
 	p {
 		width: 570px;
 		margin: 0 auto;
-		animation-delay: .4s;
+		animation-delay: .6s;
 	}
 	a {
 		padding: 15px 40px;
@@ -146,14 +145,182 @@ ul {
 		font-family: 'Raleway', sans-serif;
 		font-weight: 700;
 		font-size: 14px;
-		margin-top: 50px;
-		display: inline-block;
-		animation-delay: .6s;
-		
+		margin: 50px auto;
+		margin-bottom: 0;
+		display: block;
+		width: 30%;
+		animation-delay: .8s;
 		&:hover {
 			background: #998675;
 		}
 	}
 }
 
+
+/*Advantages-list*/
+section#advantages-list {
+	margin-top: 75px;
+	text-align: center;
+	padding-bottom: 80px;
+	a {
+		color: #555555;
+		position: relative;
+		
+		&:hover {
+			color: #d3c1ad;
+			&:after {
+			content: '';
+				position: absolute;
+				width: 70px;
+				height: 2px;
+				background: #c7b299;
+				bottom: 0px;
+				transform: translate(-50%, 18px);
+		}
+	}
+}
+	h3 {
+		color: #555555;
+		font-size: 22px;
+	}
+	p {
+		color: #8c8c8c;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 300;
+		font-size: 14px;
+	}
+}
+
+.icon-box {
+	font-size: 44px;
+}
+
+.animation-wrapper {
+	animation-delay: .3s;
+}
+.animation-wrapper2 {
+	animation-delay: .6s;
+}
+.animation-wrapper3 {
+	animation-delay: .9s;
+}
+.animation-wrapper4 {
+	animation-delay: 1.2s;
+}
+
+/*waxom-image*/
+section#waxom-image {
+	padding-top: 5%;
+  background: #fbfaf8;
+  text-align: center;
+  h3 {
+  	font-family: 'Raleway', sans-serif;
+		font-weight: 600;
+		font-size: 30px;
+		color: #555555;
+		line-height: 1.2;
+  }
+  p {
+  	font-family: 'Montserrat', sans-serif;
+		font-weight: 300;
+		font-size: 16px;
+  	color: #8c8c8c;
+  	width: 760px;
+  	margin: 0 auto;
+  	line-height: 1.75;
+  	margin-top: 10px;
+  	margin-bottom: 30px;
+  }
+}
+
+
+
+/*purchase*/
+section#purchase {
+	background-image: -moz-linear-gradient( 0deg, rgb(33,27,25) 0%, rgb(78,52,39) 100%);
+  background-image: -webkit-linear-gradient( 0deg, rgb(33,27,25) 0%, rgb(78,52,39) 100%);
+  background-image: -ms-linear-gradient( 0deg, rgb(33,27,25) 0%, rgb(78,52,39) 100%);
+	padding: 20px 0;
+	h3 {
+		color: $white;
+		font-family: 'Raleway', sans-serif;
+		font-weight: 400;
+		font-size: 28px;
+		margin-bottom: 0;
+	}
+	p {
+		color: #615855;
+		font-family: 'Raleway', sans-serif;
+		font-weight: 300;
+		font-size: 18px;
+	}
+	a {
+		text-transform: uppercase;
+		color: $white;
+		font-family: 'Raleway', sans-serif;
+		font-weight: 800;
+		background-image: linear-gradient(to top, #2F2928, #998675 50%);
+		padding: 12px 25px;
+		border-radius: 4px;
+		border: none;
+		background-size: 100% 200%;
+		background-position: 0 100%;
+		&:hover {
+			background-position: 0 -100%;
+		}
+	}
+}
+
+.Waxom-multipurpose {
+	padding-left: 15px;
+	span {
+		color: #c7b299;
+	}
+}
+
+.Waxom-purchase {
+	margin-top: 20px;
+	padding-right: 15px;
+}
+
+
+/*our latest project*/
+section#our-latest-project {
+	padding-top: 50px;
+	text-align: center;
+	h3 {
+		font-family: 'Raleway', sans-serif;
+		font-weight: 600;
+		font-size: 30px;
+		color: #555555;
+		line-height: 1.2;
+	}
+	p {
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 300;
+		font-size: 16px;
+  	color: #8c8c8c;
+  	width: 760px;
+  	margin: 0 auto;
+  	line-height: 1.75;
+	}
+}
+
+
+.portfolio-menu {
+	button {
+		display: inline-block;
+		padding: 20px;
+	}
+}
+
+.single-portfolio-item {
+	img {
+		margin-bottom: 30px;
+	}
+}
+
+.grid-item {
+	float: left;
+}
 
