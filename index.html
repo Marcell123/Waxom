@@ -21,6 +21,7 @@
 	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="demo/css/owl.carousel.min.css">
 	<link rel="stylesheet" href="demo/css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="demo/css/reveal-it.css">
 </head>
 <body>
 
@@ -102,11 +103,17 @@
 				<!-- 2nd slide -->
 				<div class="header-slider slide2">
 					<div class="container">
+						<div class="video-Container">
+							<video autoplay muted loop id="myVideo">
+							  <source src="ocean.mp4" type="video/mp4" id="bla">
+							  <source src="ocean.webm" type="video/webm">
+							</video>
+						</div>
 						<div class="inner">
 							<h3 class="animated">Unique and Modern Design</h3>
 							<h2 class="animated">Portfolio PSD Template</h2>
 							<p class="animated">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
-							<a href="#" class="header-btn animated fadeInUp">Get Started</a>
+							<a href="#" class="header-btn animated">Get Started</a>
 						</div>
 					</div>
 				</div>
@@ -134,7 +141,7 @@
 				<div class="row">
 
 					<div class="col-xs-12 col-sm-3 col-md-3 vertical-space">
-						<div class="animation-wrapper animated fadeIn cool">
+						<div class="animation-wrapper animated wow fadeIn cool">
 							<a href="#">
 								<div class="icon-box">
 									<i class="fa fa-pencil" aria-hidden="true"></i>
@@ -148,7 +155,7 @@
 					</div>
 
 					<div class="col-xs-12 col-sm-3 col-md-3 vertical-space">
-						<div class="animation-wrapper2 animated fadeIn cool">
+						<div class="animation-wrapper2 animated wow fadeIn cool">
 							<a href="#">
 								<div class="icon-box">
 									<i class="fa fa-leaf" aria-hidden="true"></i>
@@ -162,7 +169,7 @@
 					</div>
 
 					<div class="col-xs-12 col-sm-3 col-md-3 vertical-space">
-						<div class="animation-wrapper3 animated fadeIn cool">
+						<div class="animation-wrapper3 animated wow fadeIn cool">
 							<a href="#">
 								<div class="icon-box">
 									<i class="fa fa-cog" aria-hidden="true"></i>
@@ -176,7 +183,7 @@
 					</div>
 
 					<div class="col-xs-12 col-sm-3 col-md-3">
-						<div class="animation-wrapper4 animated fadeIn cool">
+						<div class="animation-wrapper4 animated wow fadeIn cool">
 							<a href="#">
 								<div class="icon-box">
 									<i class="fa fa-folder-open" aria-hidden="true"></i>
@@ -925,6 +932,8 @@
 	<script src="js/waypoints.min.js"></script>
 	<script src="js/jquery.counterup.min.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/reveal-it.js"></script>
+	<script src="js/wow.min.js"></script>
 	<script>
 		$(document).ready(function(){
 			//Slick slider. Arrows initiate
@@ -941,9 +950,8 @@
 				 $('.bg-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
 			    // console.log('afterChange - '+currentSlide);
 			    $(slick.$slides)
-			    .find('h3').removeClass('fadeInUp').parent()
-			    .find('h2').removeClass('fadeInUp').parent()
-			    .find('p').removeClass('fadeInUp').parent()
+			    .find('h3,h2,p').removeClass('fadeInUp').parent()
+			    
 			    .find('a').removeClass('fadeInUp');
 			    
 			    $(slick.$slides[currentSlide])
@@ -951,8 +959,9 @@
 			    .find('h2').addClass('fadeInUp').parent()
 			    .find('p').addClass('fadeInUp').parent()
 			    .find('a').addClass('fadeInUp');
-			  });			 
+			  });
 
+				document.getElementById('myVideo').play();
 			 
 			//Isotope. Filter items on button click
 				$('.button-group').on( 'click', 'button', function() {
@@ -1043,6 +1052,19 @@
 				$('.hamburger is-active').click(function() {
 	          $('.navigation-mobile').toggleClass('navigation-mobile_active');
 	      });
+
+			//reveal-it js initiate
+				jQuery(function () {
+				  var options1 = {
+				    id: 'box1'
+				    , delay: 3000
+				  };
+				  $('.reveal-text').initReveal(options1);
+
+					});
+
+			//WOW js initiate
+				new WOW().init();
 			
 		});		
 	</script>
