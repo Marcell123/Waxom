@@ -36,8 +36,12 @@
 							<div class="Waxom">
 								<picture>
 									<source srcset="images/waxom-logo.png">
-									<img src="images/waxon-logo.png" alt="Logo" title="Logo">
+									<img class="white" src="images/waxom-logo.png" alt="Logo" title="Logo">
 								</picture>
+									<picture>
+										<source srcset="images/waxom-logo-dark.png">
+										<img class="grey" src="images/waxom-logo-dark.png" alt="Описание" title="Описание">
+									</picture>
 							</div>
 						</div>
 						<!-- navigation-menu -->
@@ -52,11 +56,9 @@
 								<li><a href="#shortcodes" class="nav-item slowly">Shortcodes</a></li>
 								<li><a href="#contacts" class="nav-item slowly">Contacts</a></li>
 						
-								<li><a href="#" class="nav-item slowly" id="bag"><img src="images/icon-cart.png" alt="shopping-bag-icon">
-									<img class="hover-bag" src="images/icon-cart2.png" alt="hover-shopping-bag-icon"></a></li>
+								<li><a href="#" class="nav-item slowly" id="bag"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a></li>
 									
-								<li><a href="#" class="nav-item slowly" id="search"><img src="images/icon-search.png" alt="search-icon">
-									<img class="hover-search" src="images/icon-search2.png" alt="hover-search-icon"></a></li>
+								<li><a href="#" class="nav-item slowly" id="search"><i class="fa fa-search" aria-hidden="true"></i></a></li>
 							</ul>
 							<!-- hamburger-buttion for xs and sm devices -->
 							<button class="hamburger hamburger--3dxy visible-xs visible-sm" type="button">
@@ -917,8 +919,6 @@
 			</div>
 		</section>
 	<!-- end footer -->
-		
-	
 	
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -934,6 +934,7 @@
 	<script src="js/owl.carousel.min.js"></script>
 	<script src="js/reveal-it.js"></script>
 	<script src="js/wow.min.js"></script>
+
 	<script>
 		$(document).ready(function(){
 			//Slick slider. Arrows initiate
@@ -946,23 +947,20 @@
 	         nextArrow: '<button class="arrow arrow-right"><picture><source srcset="images/arrow-right.png"><img src="images/arrow-right.png" alt="arrow-right" title="arrow-right"></picture></button>'
 	      });
 
+
    		//Slick slier. Trigger animation on every current slide
 				 $('.bg-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
 			    // console.log('afterChange - '+currentSlide);
 			    $(slick.$slides)
-			    .find('h3,h2,p').removeClass('fadeInUp').parent()
-			    
-			    .find('a').removeClass('fadeInUp');
+			    .find('h3,h2,p,a').removeClass('fadeInUp').parent()
 			    
 			    $(slick.$slides[currentSlide])
-			    .find('h3').addClass('fadeInUp').parent()
-			    .find('h2').addClass('fadeInUp').parent()
-			    .find('p').addClass('fadeInUp').parent()
-			    .find('a').addClass('fadeInUp');
+			    .find('h3,h2,p,a').addClass('fadeInUp').parent()
 			  });
 
 				document.getElementById('myVideo').play();
 			 
+
 			//Isotope. Filter items on button click
 				$('.button-group').on( 'click', 'button', function() {
 				  var filterValue = $(this).attr('data-filter');
@@ -1001,6 +999,7 @@
 			    } 
 				});
 
+
 			//Owl Carousel 01 initiate
 				$('#carousel01').owlCarousel({
 			    loop: true,
@@ -1019,9 +1018,11 @@
 			    	}
 				});
 
+
 			//Owl Carousel. Arrows initiate
 	      $( ".owl-prev").html('');
 	 			$( ".owl-next").html('');
+
 
 	 		//Owl Carousel 02 initiate
 				$('#carousel02').owlCarousel({
@@ -1053,6 +1054,7 @@
 	          $('.navigation-mobile').toggleClass('navigation-mobile_active');
 	      });
 
+
 			//reveal-it js initiate
 				jQuery(function () {
 				  var options1 = {
@@ -1063,9 +1065,53 @@
 
 					});
 
+
 			//WOW js initiate
 				new WOW().init();
-			
+
+
+				$(document).ready(function(){
+				  $(window).scroll(function(){
+				  	var scroll = $(window).scrollTop();
+					  if (scroll > 1) {
+					     
+					     $(".main-menu li a").css("color" , "#8C8C8C"); 
+					     $(".grey").css("opacity", "1");
+					     $(".white").css("opacity", "0");
+					     $(".main-menu li a").css("color" , "#8C8C8C"); 
+					     $(".menu-wrap").css({
+							   'background' : 'white',
+							   'border-bottom' : 'solid 1px #EEEDEB',
+							   'margin-top' : '0'
+							});
+					  }
+					  else{
+
+						  $(".menu-wrap").css("background" , "transparent");  
+						  $(".menu-wrap ul li a").css("color" , "white");  	
+						  $(".grey").css("opacity", "0");
+						  $(".white ").css("opacity", "1");
+						  $(".menu-wrap").css({
+							   'background' : 'transparent',
+							   'border-bottom' : 'none',
+							   'margin-top' : '25px'
+							});
+					  }
+				  })
+				})
+
+				if ( $(window).width() < 739) {      
+  $(".menu-wrap").css({
+							   'position' : 'relative'
+							});
+} 
+
+
+
+ 				$('.nav-link').click(function() {
+          $('.navigation-mobile').toggleClass('navigation-mobile_active');
+        });
+
 		});		
 	</script>
 

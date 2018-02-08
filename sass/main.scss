@@ -5,7 +5,6 @@ $brown: #c7b299;
 body {
 	overflow-x: hidden;
 }
-
 html {
 	overflow-x: hidden;
 }
@@ -20,7 +19,6 @@ a:active {
 button:focus {
 	outline: none;
 }
-
 ul {
 	list-style: none;
 	padding: 0;
@@ -86,6 +84,7 @@ ul {
 	position: absolute;
 	right: 0;
 }
+
 /*Header*/
 .main-menu {
 	li {
@@ -100,7 +99,7 @@ ul {
 			position: relative;
 			line-height: 4;
 			&:hover {
-				color: $brown;
+				color: #c7b299 !important;
 			}
 			.hover-bag {
 				position: absolute;
@@ -118,6 +117,9 @@ ul {
 					opacity: 1;
 				}
 			}
+			i {
+				font-size: 20px;
+			}
 		}
 		#bag {
 			margin-left: 15px;
@@ -131,23 +133,30 @@ ul {
 		}
 	}
 }
-
-.menu-wrap {
+.Waxom {
+	position: relative;
+}
+.grey {
 	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: 0;
+}
+.menu-wrap {
+	position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   margin-top: 40px;
-  z-index: 9999;
+  z-index: 1;
+  transition: 0.7s all;
 }
-
 .slide1 {
 	background: url(../../images/header-bg.jpg) no-repeat center center;
 	background-size: cover;
 	height: 100vh;
 	min-height: 60rem;
 }
-
 .video-Container {
 	max-width: 100vw;
 }
@@ -165,14 +174,12 @@ ul {
     object-fit: fill;
 	}
 }
-
 .slide3 {
 	background: url(http://veented.info/waxom/wp-content/uploads/2015/03/water.jpg) no-repeat center center;
 	background-size: cover;
 	height: 100vh;
 	min-height: 60rem;
 }
-
 .arrow {
 	border: 0;
 	position: absolute;
@@ -1465,8 +1472,8 @@ section#footer {
 		}
 	}
 
-.arrow {
-		top: 280px;
+	.arrow {
+		top: 230px;
 		img {
 			height: 20px;
 		}
@@ -1617,11 +1624,11 @@ section#footer {
 		}
 	}
 
-		.loadmore {
-			a {
-				width: 30%;
-			}
+	.loadmore {
+		a {
+			width: 30%;
 		}
+	}
 
 
 	/*video*/
@@ -1724,12 +1731,6 @@ section#footer {
 	}
 }
 
-/* Portrait */
-@media only screen 
-and (min-device-width : 414px) 
-and (max-device-width : 736px) {
-	
-}
 
 @media (min-width: 601px) and (max-width: 767px) {
 	.menu-wrap {
@@ -1762,7 +1763,7 @@ and (max-device-width : 736px) {
 	}
 
 	.arrow {
-		top: 280px;
+		top: 230px;
 		img {
 			height: 20px;
 		}
@@ -2387,6 +2388,7 @@ and (orientation:portrait){
 
 @media only screen
 and (max-height: 320px)
+and (min-width: 320px)
 and (max-width: 480px)
 and (orientation:landscape){
   .inner {
@@ -2402,6 +2404,9 @@ and (orientation:landscape){
   	a {
   		font-size: 8px;
   	}
+  }
+  .arrow {
+  	top: 145px;
   }
 }
 
