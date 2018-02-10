@@ -193,6 +193,19 @@
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    -webkit-transition: 0.2s all;
+    -o-transition: 0.2s all;
+    transition: 0.2s all;
+}
+.slick-dots li button:hover:before {
+    opacity: .75;
+    color: transparent;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(211, 193, 173);
+    border-radius: 50%;
+    background-image: -moz-linear-gradient( -41deg, rgb(14,14,18) 0%, rgb(45,45,53) 100%);
+    background-image: -webkit-linear-gradient( -41deg, rgb(14,14,18) 0%, rgb(45,45,53) 100%);
 }
 .slick-dots li.slick-active button:before
 {
